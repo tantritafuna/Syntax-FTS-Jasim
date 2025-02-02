@@ -164,10 +164,10 @@ forecast_FLRG <- function(FLRG, i, j, data, intervals, I) {
   }
   
   if (length(FLRG) == 0) {
-    #FLRG kosong (Ai ??? ???)
+    #FLRG kosong
     return((intervals[i, 1] + intervals[i, 2]) / 2)
   } else if (length(unique(FLRG)) == 1) {
-    #One to one (Ai ??? Aj)
+    #One to one
     Y <- calculate_Y(data[length(data)], data[length(data) - 1], data[length(data) - 2])
     # Tangani nilai NA pada Y
     if (is.na(Y)) {
