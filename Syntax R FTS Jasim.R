@@ -43,7 +43,7 @@ m <- ceiling((D_max + D1 - D_min + D2) / I);m
 ##Apabila Menggunakan Metode Sturges
 m <- ceiling(1 + 3.322 * log10(n));m
 I <- 3.88
-##Mencoba Bebeapa Jumlah Interval
+##Mencoba Beberapa Jumlah Interval
 m <- 20
 I <- 1.55
 m <- 40
@@ -109,7 +109,7 @@ rule_1 <- function(Dt, Dt_1, interval_Aj, I) {
 }
 ##Aturan 2
 rule_2 <- function(Y, Dt_1, interval_Aj, I) {
-  # Kondisi 1: x = |Y| × 2 + Dt-1 ??? Aj atau x = Dt-1 - |Y| × 2 ??? Aj
+  # Kondisi 1: x = |Y| Ã— 2 + Dt-1 ??? Aj atau x = Dt-1 - |Y| Ã— 2 ??? Aj
   x1 <- abs(Y) * 2 + Dt_1
   x2 <- Dt_1 - abs(Y) * 2
   
@@ -143,7 +143,7 @@ rule_3 <- function(Y, Dt_1, interval_Aj, I) {
      x2 >= interval_Aj[1] && x2 <= interval_Aj[2]) {
     Ft <- 0.25 * I + interval_Aj[1]
   } else {
-    # Kondisi 2: x = |Y| × 2 + Dt-1 ??? Aj atau x = Dt-1 - |Y| × 2 ??? Aj
+    # Kondisi 2: x = |Y| Ã— 2 + Dt-1 ??? Aj atau x = Dt-1 - |Y| Ã— 2 ??? Aj
     x3 <- abs(Y) * 2 + Dt_1
     x4 <- Dt_1 - abs(Y) * 2
     
